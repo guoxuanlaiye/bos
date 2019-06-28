@@ -13,8 +13,6 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	
-	
-	
 	<!-- 解决Hibernate延迟加载问题 -->
 	<filter>
 		<filter-name>openSessionInView</filter-name>
