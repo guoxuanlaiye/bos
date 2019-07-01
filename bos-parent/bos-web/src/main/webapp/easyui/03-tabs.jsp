@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,14 +20,36 @@
 		-->
 		<div class="easyui-accordion" data-options="fit:true">
 			<!-- 使用子div表示每个面板 -->
-			<div data-options="iconCls:'icon-cut'" title="面板一">1111</div>
+			<div data-options="iconCls:'icon-cut'" title="面板一">
+				<a id="btn1" class="easyui-linkbutton">添加选项卡</a>
+				<script type="text/javascript">
+					$(function(){
+						$("#btn1").click(function(){
+							//判断选项卡是否存在  根据title值判断
+							var e = $("#mytabs").tabs("exists","设置");
+							if (e){
+								/* 若存在，选中 */
+								$("#mytabs").tabs("select","设置");
+							} else {
+								/* 不存在，添加 */
+								$("#mytabs").tabs("add",{
+									title:'设置',
+									closable:true,
+									content:'<iframe frameborder="0" width="100%" height="100%" src="https://www.baidu.com"></iframe>'
+								});
+							}
+						})
+					})
+				</script>
+			</div>
+			
 			<div title="面板二">2222</div>
 			<div title="面板三">3333</div>
 		</div>
 	</div>
 	<div data-options="region:'center'">
 		<!-- 制作一个tabs选项卡面板 -->
-		<div class="easyui-tabs" data-options="fit:true">
+		<div id="mytabs" class="easyui-tabs" data-options="fit:true">
 			<!-- 使用子div表示每个面板 -->
 			<div data-options="iconCls:'icon-cut'" title="面板一">1111</div>
 			<div data-options="closable:true" title="面板二">2222</div>

@@ -7,4 +7,14 @@
   </parent>
   <artifactId>bos-utils</artifactId>
   <description>bos工具类</description>
+  
+  
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.guoxuan.bos</groupId>
+  		<artifactId>bos-domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

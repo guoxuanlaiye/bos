@@ -38,8 +38,9 @@
 		<!-- 注入hibernate的映射文件 -->
 		<property name="mappingLocations">
 			<list>
-				<value>classpath:com/itheima/bos/domain/*.xml</value>
-			</list>
+			<!-- com.guoxuan.bos.domain -->
+				<value>classpath:com/guoxuan/bos/domain/*.xml</value>
+			</list> 
 		</property>
 	</bean>
 	
@@ -47,6 +48,8 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
+	<!-- 组件扫描 -->
+	<context:component-scan base-package="com.guoxuan.bos"></context:component-scan>
 	<!-- 支持spring注解 -->
 	<context:annotation-config/>
 	<tx:annotation-driven/>

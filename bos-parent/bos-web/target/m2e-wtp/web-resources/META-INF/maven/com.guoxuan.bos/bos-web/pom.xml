@@ -8,4 +8,13 @@
   <artifactId>bos-web</artifactId>
   <packaging>war</packaging>
   <description>bos前端界面、静态文件等</description>
+  
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.guoxuan.bos</groupId>
+  		<artifactId>bos-service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

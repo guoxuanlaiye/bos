@@ -7,4 +7,13 @@
   </parent>
   <artifactId>bos-service</artifactId>
   <description>bos-service层</description>
+  
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.guoxuan.bos</groupId>
+  		<artifactId>bos-dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
